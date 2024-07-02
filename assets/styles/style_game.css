@@ -1,0 +1,496 @@
+/* @import google font */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Space+Grotesk:wght@700&display=swap');
+
+
+/* paramètres universel */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rajdhani";
+}
+
+
+/*Couleurs*/
+:root{
+    --yellow: #FFFF00;
+    --yellow-light: #F8F184;
+    --beige-Light: #EDDEBF;
+    --blue-medium: #1958FD;
+    --red-dark: #B11313;
+    --crimson-dark: #890009;
+    --black-dark: #0D0E09;
+    --black: #000000;
+    --gray-Light: #c4c4c4;
+    --white: #ffffff;
+    --ligne-dicrt: #BCBBBD20;
+    --gradient-white: #ffffff20;
+    --gradient-blue-medium: #19587D40; /* #19587D ---> 40%*/
+    --gradient-crimson-dark: #89000960; /* #890009 ---> 60%*/
+    --gradient-beige-Light: #EDDEBF40; /* #EDDEBF ---> 40%*/
+
+
+}
+body{
+    background-color: var(--black);
+    color: var(--white);
+    margin: 0 102px;  /*Marge du body*/
+    /*background-color: #1958FD;*/
+}
+/*background du hero*/
+.backgrd-head{
+   /*  background-color: #811010;*/
+   background-image: url("../Illustrations/Batgame_1.png");
+    height: 901px;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+/*dimension générale du site*/
+nav,.intro,article, .multimedia, .game-body, footer{
+    width: 65vw;
+    margin: 0 auto;
+    padding: 40px 60px;
+
+}
+
+/*mise en forme du header*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 132px;
+    border-bottom: 1px solid var(--gradient-white);
+    border-left: 1px solid var(--gradient-white);
+    border-right: 1px solid var(--gradient-white);
+}
+/*   */
+
+nav ul li{
+    float: left;
+    margin: 0 10px;
+} 
+
+nav ul li .active{
+text-decoration: underline;
+font-weight: bolder;
+text-decoration-thickness: 2px;
+}
+/* lien HOME en blan  */
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+/* bande  annonce*/
+.game-body{
+    text-align: center;
+    }
+    
+.game-body h1{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    }
+
+.game-body img{
+    width: 100;
+    }
+    /*
+.game-body img:hover{
+    box-shadow: 5px 5px 50px rgba(248, 248, 248, 0.412);
+    }
+    */
+
+#debuter_jeu{
+    display: inline-block;
+    margin-top: 100px;
+    background: linear-gradient(145deg, #414040,#fef9f997, #d17422);
+    color: #fff;
+    border: none;
+    padding: 20px 80px;
+    font-weight: lighter;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* passage icons en jaune batman par hover  */
+a img:hover:not(.game-body a img) {
+    filter: sepia(100%) saturate(1000%);
+}
+
+/*  ligne  discrète de la class intro*/
+.intro{
+    border: 1px solid var(--ligne-dicrt);
+    border-bottom:none;
+    max-height: 91%;
+}
+
+/* mise en forme des élémens p de la class intro */
+.intro p {
+    width: 30vw;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 150px;
+}
+/*  mise en forme des titres de la class intro */
+.intro h1 {
+    text-transform: uppercase;
+    line-break: auto;
+    width: 30vw;
+    text-align: left;
+    font-size: 50px;
+    padding-top: 70px;
+}
+
+/*disposition de la flèche de descente verticale */ 
+.flch-descente{
+    margin-top:  45vh;
+    vertical-align: baseline;
+    text-align: center;
+}
+
+/*bouton du hero*/
+.hero .btn-adv{
+    display: flex;
+    margin: auto;
+    width: 35vw;
+    justify-content:center;
+
+}
+/* mise en forme intiale des boutons*/
+
+.btn-adv > .btn, form input[type=submit]{
+    margin: 45px auto;
+    padding: 22px;
+    background: linear-gradient(to left, #B1131340, #ffffff70);
+}
+
+/* mise en forme par effet hover des boutons*/
+.btn-adv > .btn:hover, form input[type=submit]:hover{
+    background: linear-gradient(to left, #B11313, #ffffff);
+}
+
+/* Taille de texte bouton VOIR HEROS ET ADVERSAIRES */ 
+.btn-adv .btn a{
+    font-size: small;
+    letter-spacing: 2px;
+    
+}
+
+/* ligne discrète des parties articles, multimédia, quote et bande annonce et footer*/
+article,.multimedia,.game-body, .quote, footer{
+border-left: 1px solid var(--gradient-white);
+border-right: 1px solid var(--gradient-white);
+}
+
+
+/*définition de la taille des h1 pour les parties Article et multimédia*/
+.articles h1, .cmplx-title h1, .multimedia h1{
+    
+    font-size: 2em;
+}
+.articles p,.cmplx-title p{
+    font-size: 1.2em;
+}
+
+/* disposition du groupe titre 'NEMESIS + BATHOME13'*/
+.cmplx-title{
+    display: flex;
+    justify-content:flex-start;
+}
+
+.cmplx-title h1{
+    align-self: last baseline;
+}
+/* disposition du groupe titre 'NEMESIS + BATHOME13'*/
+.iron-bat{
+position: relative;
+left: -100px;
+top: 40px;
+
+}
+.iron-bat img{
+    transform: scale(0.8);
+
+}
+/*  Accroche right side batman*/ 
+.Batman-right-side{
+text-align: right;
+margin: 0 auto;
+width: calc(65vw + 224.5px);
+height: 0px;
+}
+.Batman-right-side img{
+    position: relative;
+    top:-320px ;
+
+    }
+
+
+
+/* disposition image league*/
+.league_img{
+    margin:auto;
+    width: 75vw;
+    }
+.league_img img{
+        
+        max-width: 100%;
+        }
+.solo-article{
+    padding-left: 10vw;
+}
+/* mise en display grid des partie multimédia et quote */
+
+.multimedia .mulimedia-show, .quote{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+
+}
+
+/* carte multimedia*/
+.multimedia .mulimedia-show{
+    align-items:center;
+    text-align: center;
+}
+
+.mulimedia-show .multimedia-card{
+border: 1px solid rgba(78, 77, 77, 0.5);
+background: linear-gradient(to bottom, var(--gradient-white),var(--gradient-blue-medium));
+border-radius: 15px;
+display: flex;
+width: 40vw;
+height: 250px;
+}
+.multimedia-card .mediatext{
+    padding-left: 40px 30px;
+    line-height: 1.5em;
+    padding: 20px;
+    overflow: hidden;
+    text-align: start;
+    overflow-y:auto;
+}
+.multimedia-card .mediatext p{
+  font-size: 0.8em;
+}
+
+.multimedia-card img{
+    height: 100%;
+}
+
+
+
+
+    /* Forme*/
+    form{
+        margin: 0 auto ;
+        display: table;
+        padding: 50px;
+    }
+    form p{
+        margin-bottom: 20px;
+        font-size: larger;
+    }
+    form label{
+        color: var(--white);
+        opacity: 0.5;
+    }
+    form input[type=text],form input[type=email],textarea,select {
+
+        display: table-cell;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px solid var(--gradient-beige-Light);
+        color: var(--beige-Light);
+        background-color: rgba(255, 0, 0, 0.001);
+        width: 40vw;
+    }
+
+/*sélection des input type=checkbox sauf celui de id=accept */
+    form input[type=checkbox]:not(#accept) {
+        margin: 10px 20px;
+        margin-bottom: 50px;
+        visibility: hidden;
+    }
+    /*sélection des labels des input type=checkbox */
+    form input[type=checkbox]+label{
+        padding: 10px;
+        background: linear-gradient(to right,var(--gradient-beige-Light),var(--gradient-blue-medium) );
+    }
+    form input:checked+label,form input[type=checkbox]+label:hover{
+        background: linear-gradient(to right,var(--beige-Light),var(--black-dark ));
+    }
+    /* Mise en forme des placeholder*/
+    form input::placeholder{
+        color: var(--gradient-beige-Light);
+    }
+/* Mise en forme du submit ( bouton submit de form) */
+    form input[type=submit]{
+
+        padding: 22px;
+        width: 200px;
+        background: linear-gradient(to left, #B1131340, #ffffff70);
+        border: none;
+        color: var(--white);
+        font-size: larger;
+    }
+.submt{
+    text-align: center;
+}
+
+form .radios{
+    text-align: center;
+}
+
+select option {
+    background-color: var(--black-dark);
+    color: var(--white);
+    padding: 8px 12px; 
+}
+.form-info{
+    margin: 0 auto;
+    width: 77vw;
+    background: linear-gradient(to right, var(--gradient-white),var(--gradient-blue-medium));
+}
+
+.form-info h1{
+text-align: center;
+padding: 30px;
+}
+
+/* Mise en forme Quote */
+.quote{
+    padding: 20px;
+    margin: auto;
+    width: 65vw;
+    align-content: center;
+    grid-template-rows: 120px 120px 120px;
+}
+
+.quote .qt1{ 
+    grid-row: 1;
+    grid-column: 1;
+}
+.quote .qt2{ 
+    text-align: end;
+    grid-row: 3;
+    grid-column: 3;
+
+}
+.quote .qt-text{
+    text-align: center;
+    grid-row: 2;
+    grid-column: 2;
+    overflow:hidden;
+}
+
+.qt-text p:nth-child(1){
+    font-size: 1.5em;
+    padding-bottom: 35px;
+    grid-row: 2;grid-column: 2;}
+    .qt-text p:nth-child(2){
+        font-size: 1em;
+        padding-bottom: 35px;
+        line-height: 1.3em;}
+
+
+    .ce-projet{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    }
+    .ce-projet>*{
+padding: 10px;
+        }
+
+.partn{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+    
+}
+.sidectrl{
+        
+        height: 10px;
+}
+/*disposition du side link*/
+.ctrl{
+    
+    position: fixed;
+    top: 40%;
+    right: 14.25vw;
+    display: grid;
+    grid-template-rows: 80px 50px 50px 50px 50px;
+    align-content: start;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+ .btn a{
+    color: var(--white);
+    font-size: larger;
+    text-decoration-line: none;
+}
+
+.cards{
+    margin:auto;
+    width: 500px;
+    display: flex;
+    justify-content:center;
+    margin-top: 40px;
+
+ }
+ figure{
+    text-align: center;
+    margin: 0 10px;
+ }
+/*zoom de +10% sue hover*/
+
+ figure:hover{
+    transform: scale(1.1);
+    transition: transform 1s;
+ }
+
+
+figcaption{
+    text-align: center;
+    font-size: small;
+}
+
+/* debut du responsive*/ 
+@media (max-width: 1100px) {
+
+    .hero .btn-adv, .cards{
+       flex-direction: column;
+    }
+    figure{
+        text-align: start;
+     }
+     figure figcaption{
+        text-align: start;
+     }
+
+}

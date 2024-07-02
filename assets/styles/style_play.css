@@ -1,0 +1,123 @@
+.quiz-container {
+    margin-top: 100px;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.question-header {
+    font-size: 30px;
+    margin-bottom: 70px;
+    font-weight: bolder;
+}
+
+.question-content {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-image{
+    align-self: flex-start;
+margin: 0 30px;
+vertical-align: top;
+transform: scale(.7);
+}
+
+.right-image{
+    position: relative;
+    top: -224px;
+    right: 193px;
+    transform: scale(.7);
+    z-index: 1;
+    }
+    .question-footer {
+      /* border: 1px solid #eee;*/
+    }
+    
+    .question-footer button {
+        margin-top: 100px;
+        vertical-align: top;
+        background: linear-gradient(145deg, #414040,#fef9f997, #d17422);
+        color: #fff;
+        border: none;
+        padding: 15px 40px;
+        font-weight: lighter;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .question-footer button:hover {
+        background-color: #ff9900;
+    }
+
+
+
+.footer-image{
+    
+    position: relative;
+    top: 30px;
+    transform: scale(.8);
+    }
+.question {
+    z-index: 2;
+    text-align: left;
+}
+
+.question p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.custom-radio {
+    min-width: 400px;
+    background-color: #837f7f;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+}
+
+.custom-radio input {
+  
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-radio-mark {
+
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    margin: 5px;
+}
+
+.custom-radio input:checked ~ .custom-radio-mark {
+    background-color: #2196F3;
+}
+
+.custom-radio-mark:after {
+    position: absolute;
+    display: none;
+}
+
+.custom-radio input:checked ~ .custom-radio-mark:after {
+    display: block;
+}
+
+.custom-radio .custom-radio-mark:after {
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
